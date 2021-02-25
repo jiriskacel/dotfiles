@@ -1,0 +1,5 @@
+[user]
+	name = Jiri Skacel
+	email = jiri.skacel@solarwinds.com
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
