@@ -1,5 +1,30 @@
 [user]
 	name = Jiri Skacel
 	email = jiri.skacel@solarwinds.com
+
+[core]
+	autocrlf = true
+	editor = code --wait
+
 [credential]
 	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+
+[pull]
+	ff = only
+
+[diff]
+	tool = vscode
+	wsErrorHighlight = all
+
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+
+[merge]
+	tool = vscode
+	conflictStyle = diff3
+
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+
+[color "diff"]
+	whitespace = reverse red
