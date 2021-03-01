@@ -1,0 +1,17 @@
+- defaults:
+    link:
+      force: true
+      create: true
+      relink: true
+
+- link:
+    ~\.gitconfig:
+    ~\.wslconfig:
+    ~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1:
+
+- shell:
+    - powershell -c 'Install-Module posh-git -Scope CurrentUser -AllowPrerelease -Force'
+
+- shell:
+    - git submodule sync --recursive
+    - git submodule update --init --recursive
