@@ -7,7 +7,10 @@ function Test-Administrator
 Set-PSReadLineKeyHandler -Chord ctrl+w -Function BackwardKillWord
 
 Import-Module posh-git
-$GitPromptSettings.DefaultPromptPrefix.Text = "$env:USERNAME@$env:COMPUTERNAME$(Write-Prompt ':' -ForegroundColor White)"
-$GitPromptSettings.DefaultPromptPrefix.ForegroundColor = [ConsoleColor]::Green
+$GitPromptSettings.DefaultPromptPrefix.Text = `
+  $(Write-Prompt $env:USERNAME -fore $([ConsoleColor]::DarkGray)) +
+  $(Write-Prompt '@' -fore $([ConsoleColor]::Gray)) +
+  $(Write-Prompt $env:COMPUTERNAME -fore $([ConsoleColor]::Green)) +
+  $(Write-Prompt ':' -fore $([ConsoleColor]::Gray))
 $GitPromptSettings.DefaultPromptPath.ForegroundColor = [ConsoleColor]::Blue
 $GitPromptSettings.DefaultPromptSuffix.ForegroundColor = If (Test-Administrator) { [ConsoleColor]::Red } Else { [ConsoleColor]::White }
