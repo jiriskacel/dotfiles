@@ -1,0 +1,127 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  //#region Terminal
+  {
+    "key": "alt+1",
+    "command": "workbench.action.terminal.focusAtIndex1",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+2",
+    "command": "workbench.action.terminal.focusAtIndex2",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+3",
+    "command": "workbench.action.terminal.focusAtIndex3",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+4",
+    "command": "workbench.action.terminal.focusAtIndex4",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+5",
+    "command": "workbench.action.terminal.focusAtIndex5",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+6",
+    "command": "workbench.action.terminal.focusAtIndex6",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+7",
+    "command": "workbench.action.terminal.focusAtIndex7",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+oem_3",
+    "command": "workbench.action.terminal.focusNext"
+  },
+  {
+    "key": "alt+8",
+    "command": "workbench.action.terminal.focusAtIndex8",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+9",
+    "command": "workbench.action.terminal.focusAtIndex9",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+oem_3",
+    "command": "workbench.action.terminal.kill"
+  },
+  //#region cursorWord
+  {
+    "key": "ctrl+alt+right",
+    "command": "cursorWordPartRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+right",
+    "command": "cursorWordPartRightSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+alt+left",
+    "command": "cursorWordPartStartLeft",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+left",
+    "command": "cursorWordPartStartLeftSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+alt+backspace",
+    "command": "deleteWordPartLeft",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+backspace",
+    "command": "deleteWordPartRight",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+oem_3",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "workbench.action.tasks.runTask"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "-workbench.action.tasks.build"
+  },
+  {
+    "key": "ctrl+shift+v tab",
+    "command": "type",
+    "args": {
+      "text": "\t"
+    },
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "-editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+oem_2",
+    "command": "editor.emmet.action.matchTag"
+  }
+]

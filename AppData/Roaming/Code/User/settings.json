@@ -1,0 +1,81 @@
+{
+  // Core editor
+  "editor.fontSize": 13,
+  "editor.fontFamily": "'Cascadia Code', Consolas, monospace",
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [120, 160],
+  "editor.cursorBlinking": "phase",
+  "editor.fontLigatures": true,
+  "editor.minimap.renderCharacters": false,
+
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "One Monokai",
+  "workbench.sideBar.location": "right",
+  "workbench.editor.highlightModifiedTabs": true,
+
+  "window.zoomLevel": -1,
+
+  "extensions.ignoreRecommendations": true,
+
+  "terminal.integrated.automationProfile.windows": {
+    "path": "pwsh.exe",
+    "args": ["-NonInteractive", "-NoProfile"]
+  },
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.profiles.windows": {
+    "Git Bash": null,
+    "Command Prompt": null
+  },
+
+  // Extensions
+
+  // C Spell
+  "cSpell.language": "en,cs",
+  "cSpell.customDictionaries": {
+    "mine": {
+      "name": "mine",
+      "path": "~/.config/dictionary.txt",
+      "addWords": true,
+      "scope":"user"
+    }
+  },
+
+  // Devcontainer
+  "dev.containers.copyGitConfig": false,
+  "dev.containers.defaultExtensions": [
+    "eamodio.gitlens",
+    "streetsidesoftware.code-spell-checker",
+  ],
+ "dotfiles.installCommand": "./bootstrap.sh",
+ "dotfiles.repository": "jiriskacel/dotfiles",
+
+  // Git
+  "git.mergeEditor": true,
+  "git.untrackedChanges": "separate",
+  "gitlens.statusBar.enabled": false,
+  "gitlens.hovers.enabled": false,
+  "gitlens.views.repositories.showBranchComparison": false,
+  "gitlens.views.repositories.compact": true,
+  "gitlens.defaultDateFormat": "YYYY-MM-DDTHH:mm:ss[Z]",
+  "gitlens.blame.ignoreWhitespace": true,
+
+  // Filetypes overrides
+  "[diff]": {
+    "files.insertFinalNewline": false,
+    "files.trimTrailingWhitespace": false,
+    "editor.formatOnSave": false
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[git-rebase]": {
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+}

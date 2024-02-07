@@ -1,0 +1,6 @@
+[user]
+	name = Jiri Skacel
+	email = jiri.skacel@solarwinds.com
+
+[commit]
+	gpgsign = true
