@@ -8,15 +8,7 @@ $YADM_BAT = "$YADM.bat"
 # install yadm
 New-Item -ItemType Directory (Split-Path -Parent $YADM) -EA 0 | Out-Null
 Invoke-WebRequest "https://github.com/TheLocehiliosan/yadm/raw/master/yadm" -OutFile $YADM
-@'
-@echo off
-
-for %%I in ("git.exe") do for %%J in ("%%~$PATH:I") do set GitFolder=%%~dpJ..\
-set ShellExe=%GitFolder%bin\sh.exe
-set GIT_WORK_TREE=%USERPROFILE%
-
-"%ShellExe%" %~dp0yadm %*
-'@ | Out-File -Encoding ascii $YADM_BAT
+Invoke-WebRequest "https://github.com/jiriskacel/dotfiles/raw/yadm/windows/bin/yadm.bat" -OutFile $YADM_BAT
 
 # clone dotfiles
 & $YADM_BAT clone "https://github.com/jiriskacel/dotfiles" -b "yadm/windows" --no-bootstrap
