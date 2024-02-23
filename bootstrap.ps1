@@ -1,5 +1,6 @@
 param(
-    [string[]]$Class = @()
+    [string[]]$Class = @(),
+    [string]$Os
 )
 
 $YADM = "$env:USERPROFILE\bin\yadm"
@@ -15,6 +16,9 @@ Invoke-WebRequest "https://github.com/jiriskacel/dotfiles/raw/yadm/windows/bin/y
 & $YADM_BAT checkout HEAD -- $HOME
 $Class | ForEach-Object {
     & $YADM_BAT config --add local.class $_
+}
+if ($Os) {
+    & $YADM_BAT config local.os $Os
 }
 & $YADM_BAT alt
 & $YADM_BAT bootstrap

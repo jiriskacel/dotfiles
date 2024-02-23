@@ -1,11 +1,12 @@
 #!/bin/bash
 YADM=$HOME/bin/yadm
 
-while getopts c: name
+while getopts c:o: name
 do
     case $name in
     c)    CLASS="$CLASS $OPTARG";;
-    ?)   printf "Usage: %s: [-c class]\n" $0
+    o)    OS="$OPTARG";;
+    ?)   printf "Usage: %s: [-o <os_override>] [-c <class>...]\n" $0
           exit 2;;
     esac
 done
@@ -21,5 +22,8 @@ $YADM checkout HEAD -- $HOME
 for class in $CLASS; do
     $YADM config --add local.class $class
 done
+if [ -n "$OS" ]; then
+    $YADM config local.os $OS
+fi
 $YADM alt
 $YADM bootstrap
