@@ -1,5 +1,8 @@
 devcontainer
 dotfile
 dotfiles
+otel
 pwsh
+SWIS
+uams
 yadm
