@@ -15,7 +15,6 @@
   "workbench.colorTheme": "One Monokai",
   "workbench.sideBar.location": "right",
   "workbench.editor.highlightModifiedTabs": true,
-
   "window.zoomLevel": -1,
 
   "extensions.ignoreRecommendations": true,
@@ -44,12 +43,13 @@
   },
 
   // Devcontainer
+  "remote.autoForwardPorts": false,
   "dev.containers.copyGitConfig": false,
   "dev.containers.defaultExtensions": [
     "eamodio.gitlens",
     "streetsidesoftware.code-spell-checker",
   ],
- "dotfiles.installCommand": "./bootstrap.sh",
+ "dotfiles.installCommand": "bootstrap_docker.sh",
  "dotfiles.repository": "jiriskacel/dotfiles",
 
   // Git
