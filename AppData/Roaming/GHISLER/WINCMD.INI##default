@@ -196,8 +196,9 @@ PluginSelMax=0
 [ContentPlugins64]
 $checksum$=3014672
 [Shortcuts]
-CS+C=em_terminal
 C+H=cm_SwitchHidSys
+CS+C=cm_CopyNetNamesToClip
+CS+X=em_terminal
 [Lister]
 Wrap=1
 textwidth=81
