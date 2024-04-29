@@ -48,6 +48,7 @@
   "dev.containers.defaultExtensions": [
     "eamodio.gitlens",
     "streetsidesoftware.code-spell-checker",
+    "mutantdino.resourcemonitor",
   ],
  "dotfiles.installCommand": "bootstrap_docker.sh",
  "dotfiles.repository": "jiriskacel/dotfiles",
