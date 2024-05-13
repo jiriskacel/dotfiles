@@ -9,5 +9,8 @@ Start-Job {
 } | Out-Null
 
 function dev {
-  Import-Module C:\source\orion\tools\DevDevelopment.psm1 -Force -ErrorAction SilentlyContinue
+  $orion = git config --get maintenance.repo | Select-String -Raw orion
+  if ($orion) {
+    Import-Module $orion\tools\DevDevelopment.psm1 -Force
+  }
 }
