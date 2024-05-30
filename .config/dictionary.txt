@@ -1,5 +1,8 @@
+builtin
 devcontainer
 dotfile
 dotfiles
+fsys
 pwsh
+rego
 yadm
