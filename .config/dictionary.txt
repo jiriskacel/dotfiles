@@ -1,8 +1,13 @@
 builtin
+combobox
+datasource
+datasources
 devcontainer
 dotfile
 dotfiles
 fsys
+healthcheck
+nico
 pwsh
 rego
 yadm
