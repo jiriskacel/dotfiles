@@ -38,20 +38,20 @@
       "name": "mine",
       "path": "~/.config/dictionary.txt",
       "addWords": true,
-      "scope":"user"
+      "scope": "user"
     }
   },
 
   // Devcontainer
-  "remote.autoForwardPorts": false,
+  "dev.containers.repositoryConfigurationPaths": ["S:\\dev"],
   "dev.containers.copyGitConfig": false,
   "dev.containers.defaultExtensions": [
     "eamodio.gitlens",
     "streetsidesoftware.code-spell-checker",
-    "mutantdino.resourcemonitor",
+    "mutantdino.resourcemonitor"
   ],
- "dotfiles.installCommand": "bootstrap_docker.sh",
- "dotfiles.repository": "jiriskacel/dotfiles",
+  "dotfiles.installCommand": "bootstrap_docker.sh",
+  "dotfiles.repository": "jiriskacel/dotfiles",
 
   // Git
   "git.mergeEditor": true,
