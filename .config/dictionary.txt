@@ -10,4 +10,5 @@ healthcheck
 nico
 pwsh
 rego
+swis
 yadm
