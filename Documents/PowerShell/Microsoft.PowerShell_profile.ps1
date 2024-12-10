@@ -4,10 +4,7 @@ Get-ChildItem "$PSScriptRoot\Scripts" -Filter *.ps1 | ForEach-Object {
   . $_
 }
 
-Start-Job {
-  yadm fetch
-} | Out-Null
-
+yadm fetch | Out-Null
 function dev {
   $orion = git config --get maintenance.repo | Select-String -Raw orion
   if ($orion) {
