@@ -2,6 +2,7 @@ function Remove-NodeModules {
   [Alias("nuke")]
   [CmdletBinding()]
   param (
+      [switch]$Parallel,
       [switch]$Apollo,
       [switch]$Fusion,
       [string[]]$Path
@@ -22,13 +23,27 @@ function Remove-NodeModules {
   function NukeModules {
     param ($Path)
     Write-Host "removing $Path"
-    Start-Job { param($dir); cmd /c "rmdir /s/q $dir"; } -ArgumentList $Path
+    if ($Parallel) {
+      Start-Job { param($dir); cmd /c "rmdir /s/q $dir"; } -ArgumentList $Path
+    } else {
+      cmd /c "rmdir /s/q $Path";
+    }
   }
 
   function NukeGit {
     param ($Path)
     Write-Host "cleaning $Path"
-    Start-Job { param($dir); cd $dir; git clean -qfdx . -e '*.sln' -e '*.code-workspace' -e '*.TestDeployment.config.json' } -ArgumentList $Path
+    if ($Parallel) {
+      Start-Job { param($dir); cd $dir; git clean -qfdx . -e '*.sln' -e '*.code-workspace' -e '*.TestDeployment.config.json' } -ArgumentList $Path
+    } else {
+      try {
+        Push-Location $Path
+        git clean -qfdx . -e '*.sln' -e '*.code-workspace' -e '*.TestDeployment.config.json'
+      }
+      finally {
+        Pop-Location
+      }
+    }
   }
 
   function WaitJobs {
