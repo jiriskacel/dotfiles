@@ -28,6 +28,7 @@
     "Git Bash": null,
     "Command Prompt": null
   },
+  "terminal.integrated.suggest.enabled": false,
 
   // Extensions
 
@@ -62,6 +63,17 @@
   "gitlens.views.repositories.compact": true,
   "gitlens.defaultDateFormat": "YYYY-MM-DDTHH:mm:ss[Z]",
   "gitlens.blame.ignoreWhitespace": true,
+
+  // Copilot
+  "chat.mcp.gallery.enabled": true,
+  "chat.edits2.enabled": true,
+  "inlineChat.enableV2": true,
+  "chat.implicitContext.enabled": {
+    "panel": "first"
+  },
+  "chat.tools.terminal.autoApprove": {
+    "git fetch": true
+  },
 
   // Filetypes overrides
   "[diff]": {
