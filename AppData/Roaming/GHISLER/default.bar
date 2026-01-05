@@ -1,5 +1,5 @@
 [Buttonbar]
-Buttoncount=27
+Buttoncount=28
 button1=wcmicons.dll
 cmd1=cm_Rereadsource
 iconic1=0
@@ -76,3 +76,7 @@ cmd27=em_code
 param27=.
 iconic27=0
 menu27=VS Code
+button28=%LOCALAPPDATA%\Programs\Microsoft VS Code Insiders\Code - Insiders.exe
+cmd28=em_code_insiders
+param28=.
+menu28=VS Code
